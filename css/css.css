@@ -62,6 +62,11 @@ html{
 
 body{
     background-color:red;
+
+    /*apply a background image*/
+    background-image:url("../images/white_brick_wall.png");
+    /*control how the background repeats*/
+    background-repeat:no-repeat;
 }
 
 /* use a class to target an element with a dot */
@@ -94,6 +99,16 @@ body{
     background-color:blue;
     width:40vw;
     height:40vh;
+
+    /*positioning a background*/
+    background-image:url("../images/bread.jpg");
+    /*control the spot a background image starts*/
+    background-position: 40px 20px; /*sets the horizontal then vertical position of the image*/
+    background-repeat:no-repeat; 
+
+    /*background shorthand replaces the individual background properties in one line
+    the order is: color, url, repeat, position-x, position-y*/
+    background:blue url("../images/bread.jpg") no-repeat right bottom;
 }
 
 .using-percent{
@@ -117,4 +132,26 @@ body{
 
     /*if you have a list, use list-style to control the bullets*/
     list-style:none; /*this removes bullets from a list (but is already in the CSS reset)*/
+}
+
+/*apply CSS to multiple elements by listing them with a comma*/
+.image-contain, .image-cover{
+    border:black 3px solid;
+    width:50vw;
+    height:20vh;
+    background-image:url("../images/bread.jpg");
+    background-repeat:no-repeat;
+    background-position:center center;
+}
+
+/*background-size allows you to scale the background - either with a fixed value or cover or contain*/
+
+.image-contain{
+    /*contain scales the background image so it's always inside the element*/
+    background-size:contain;
+}
+
+.image-cover{
+    /*cover scales the background image so it's always covering the element*/
+    background-size:cover;
 }
